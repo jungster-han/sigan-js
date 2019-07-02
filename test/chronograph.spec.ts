@@ -37,4 +37,8 @@ describe('Verify Chronograph class', () => {
         expect(Math.floor(chronograph.getElapsedTime() / 1000)).toBe(Math.floor((Date.now() - setDate.getTime()) / 1000));
     });
 
+    it('Is able to retrieve start time', ()=>{
+        console.log(Chronograph.new().setStartTime(new Date(2018, 11, 24, 10, 33, 30).getTime()).getElapsedTime());
+    })
+
 });

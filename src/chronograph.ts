@@ -12,11 +12,18 @@ export default class Chronograph {
             return Date.now() - +(this.startTime);
         }
     }
-    getStartTime(){
+
+    getStartTime() {
         return this.startTime;
     }
+
     setStartTime(startTime: number) {
         this.startTime = startTime;
+        return this;
+    }
+
+    static new() {
+        return new Chronograph();
     }
 
 }
