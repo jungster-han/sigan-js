@@ -1,19 +1,21 @@
 export default class Chronograph {
-    startTime: Date;
+    private startTime: number;
 
-    constructor(startTime) {
-        this.startTime = startTime;
+    constructor() {
+        this.startTime = Date.now()
     }
 
     getElapsedTime() {
         if (this.startTime == null) {
             throw 'Start time is not set'
         } else {
-            Date.now() - this.startTime.getTime();
+            return Date.now() - +(this.startTime);
         }
     }
-
-    setStartTime(startTime: Date) {
+    getStartTime(){
+        return this.startTime;
+    }
+    setStartTime(startTime: number) {
         this.startTime = startTime;
     }
 
