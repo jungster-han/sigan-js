@@ -1,6 +1,6 @@
-# sigan
+# sigan-js
 
-### sigan is a time tracking library. 
+### sigan-js is a time measurement library. 
 
 Creating new object, default time is time of object instatiation
 ```
