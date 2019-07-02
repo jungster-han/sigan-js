@@ -1,4 +1,4 @@
-# sigan
+# sigan-js
 
 ### sigan is a time tracking library. 
 
