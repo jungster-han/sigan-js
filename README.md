@@ -2,25 +2,26 @@
 
 ### sigan is a time tracking library. 
 
-Creating new object
+Creating new object, default time is time of object instatiation
 ```
 let timer = new Sigan();
 or
 let timer = Sigan.new();
 ```
-object is intialized with time of creation.
+
+Returns start time in milliseconds 
 
 ```
 timer.getStartTime()
 ```
-returns start time in milliseconds 
+
+Set new start time to whatever time you would like to set as
 
 ```
 timer.setStartTime(Date.now())
 ```
-sets new start time to whatever time you would like to set as
 
+Return time passed from start time to current time in milliseconds
 ```
 timer.getElapsedTime()
 ```
-returns milliseconds passed from start time to current time
