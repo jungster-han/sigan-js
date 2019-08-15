@@ -25,3 +25,8 @@ Return time passed from start time to current time in milliseconds
 ```
 timer.getElapsedTime()
 ```
+
+Get today's date with own seperator enclosed in 'quotes'
+```
+timer.getTodayDate('-') // will return MM-dd-YYYY
+```
