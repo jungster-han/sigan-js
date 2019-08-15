@@ -14,6 +14,16 @@ export default class Chronograph {
         }
     }
 
+    getTodayDate(format: String) {
+        let today = new Date();
+        var dd = String(today.getDate()).length > 1 ? String(today.getDate()) : '0' + String(today.getDate());
+        var mm = String(today.getMonth() + 1).length > 1 ? String(today.getMonth() + 1) : '0' + String(today.getMonth() + 1)
+        var yyyy = today.getFullYear();
+
+        return mm + format + dd + format + yyyy;
+
+    }
+
     getStartTime() {
         return this.startTime;
     }
@@ -23,7 +33,7 @@ export default class Chronograph {
         return this;
     }
 
-    saveElapsedTime(){
+    saveElapsedTime() {
         this.savedTimeList.push(this.getElapsedTime());
     }
 

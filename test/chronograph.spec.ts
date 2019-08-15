@@ -13,13 +13,13 @@ describe('Verify Chronograph class', () => {
 
     it('Is able to set start time and return elapse time from that moment', done => {
         let chronograph = new Chronograph();
-        setTimeout(()=>{
+        setTimeout(() => {
             chronograph.setStartTime(Date.now());
-            setTimeout(()=>{
+            setTimeout(() => {
                 expect(chronograph.getElapsedTime()).toBeGreaterThanOrEqual(2000);
                 expect(chronograph.getElapsedTime()).toBeLessThan(2099)
                 done();
-            }, 2000);      
+            }, 2000);
         }, 1000);
     });
 
@@ -29,11 +29,16 @@ describe('Verify Chronograph class', () => {
         chronograph.setStartTime(setDate.getTime());
         expect(Math.floor(chronograph.getElapsedTime() / 1000)).toBe(Math.floor((Date.now() - setDate.getTime()) / 1000));
     });
-    
+
     it('Is able to set time in the future and return time to that moment in negative number', () => {
         let chronograph = new Chronograph();
         let setDate = new Date("Wed, 4 July 2019 07:45:00 GMT")
         chronograph.setStartTime(setDate.getTime());
         expect(Math.floor(chronograph.getElapsedTime() / 1000)).toBe(Math.floor((Date.now() - setDate.getTime()) / 1000));
     });
+
+    it('Return today date separated by "/"', () => {
+        let chronograph = new Chronograph();
+        console.log(chronograph.getTodayDate('-'));
+    })
 });
